@@ -35,7 +35,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, IHttpRequestResponse):
         url = http.getUrl().toString()
         method = head.split()[0]
         
-        command = "ffuf -u {} ".format(url)
+        command = "ffuf -u '{}' ".format(url)
         if method != "GET":
             command += "-X {} ".format(method)
         for k,v in headers.items():
