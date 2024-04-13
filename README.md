@@ -1,6 +1,6 @@
 # Copy as FFUF Command
 
-Burp Suite extension FFUF command generation.
+Burp Suite extension for FFUF command generation.
 
 ## Modify the request to place the FUZZ keyword on the request
 
