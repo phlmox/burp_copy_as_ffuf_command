@@ -30,16 +30,16 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, IHttpRequestResponse):
         requestStr = self._helpers.bytesToString(http.getRequest())
         head=requestStr.split('\r\n')[0]
         headers = {k:v for k,v in list(map(lambda x:[x.split(":")[0],':'.join(x.split(":")[1:])],requestStr.split('\r\n\r\n')[0].split('\r\n')[1:])) if k not in ["Host","Content-Length","Connection","Accept-Encoding","Accept"]}
-        data = requestStr.split('\r\n\r\n')[1].replace("\"","\\\"")
+        data = requestStr.split('\r\n\r\n')[1].replace("\\","\\\\").replace("\"","\\\"")
         
         url = http.getUrl().toString()
         method = head.split()[0]
         
-        command = "ffuf -u '{}' ".format(url)
+        command = "ffuf -u \"{}\" ".format(url.replace("\\","\\\\").replace("\"","\\\""))
         if method != "GET":
             command += "-X {} ".format(method)
         for k,v in headers.items():
-            command += "-H '{}:{}' ".format(k,v)
+            command += "-H \"{}:{}\" ".format(k.replace("\\","\\\\").replace("\"","\\\""),v.replace("\\","\\\\").replace("\"","\\\""))
         if data:
             command += "-d \"{}\" ".format(data)
         
