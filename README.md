@@ -18,6 +18,9 @@ extensions (`-e`), threads, rate, recursion, proxy, JSON output, wordlist and ex
 A live preview shows the command. Your choices are remembered for next time; **Reset defaults** restores them.
 Press **Copy** (or Enter).
 
+<img width="2517" height="1204" alt="image" src="https://github.com/user-attachments/assets/34bd18a1-258d-4b41-8bac-52205dd58388" />
+
+
 ## Command is copied to your clipboard
 
 ![3](https://github.com/phlmox/burp_copy_as_ffuf_command/assets/62145317/b38f9693-f861-4cfb-a083-e0dcd5d55915)
