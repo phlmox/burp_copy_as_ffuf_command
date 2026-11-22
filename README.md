@@ -10,6 +10,14 @@ Burp Suite extension for FFUF command generation.
 
 ![2](https://github.com/phlmox/burp_copy_as_ffuf_command/assets/62145317/64fd7e77-0ac9-4460-a6b1-6e0cd06d332c)
 
+## Pick your flags in the popup
+
+A popup lets you tick the ffuf flags you want: match/filter status codes (`-mc`/`-fc`),
+size/word/line/regex filters (`-fs`/`-fw`/`-fl`/`-fr`), auto-calibration (`-ac`),
+extensions (`-e`), threads, rate, recursion, proxy, JSON output, wordlist and extra raw args.
+A live preview shows the command. Your choices are remembered for next time; **Reset defaults** restores them.
+Press **Copy** (or Enter).
+
 ## Command is copied to your clipboard
 
 ![3](https://github.com/phlmox/burp_copy_as_ffuf_command/assets/62145317/b38f9693-f861-4cfb-a083-e0dcd5d55915)
